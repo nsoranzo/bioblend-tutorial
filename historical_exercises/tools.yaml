@@ -1,0 +1,4 @@
+toolshed.g2.bx.psu.edu:
+  devteam:
+  - bam_to_sam
+  - ctd_batch
