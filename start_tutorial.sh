@@ -12,5 +12,5 @@ test -z "$VIRTUAL_ENV" || deactivate || true
 virtualenv .venv && . .venv/bin/activate
 python -c 'import sys; sys.version_info >= (2, 7, 9) or sys.exit(1)' || pip install --upgrade --force-reinstall requests[security]
 pip install --upgrade "$BIOBLEND_TARGET"
-pip install ipython[all]
-ipython notebook
+pip install jupyter
+jupyter notebook
