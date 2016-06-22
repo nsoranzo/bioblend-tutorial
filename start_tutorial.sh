@@ -9,7 +9,10 @@ cd `dirname $0`
 BIOBLEND_TARGET="${BIOBLEND_TARGET:-bioblend}"
 
 test -z "$VIRTUAL_ENV" || deactivate || true
-virtualenv .venv && . .venv/bin/activate
+if [ ! -d .venv ]; then
+    virtualenv .venv
+fi
+. .venv/bin/activate
 python -c 'import sys; sys.version_info >= (2, 7, 9) or sys.exit(1)' || pip install --upgrade --force-reinstall requests[security]
 pip install --upgrade "$BIOBLEND_TARGET"
 pip install jupyter
