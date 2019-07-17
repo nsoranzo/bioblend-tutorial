@@ -1,1 +1,2 @@
+# Use git+git://github.com/galaxyproject/bioblend.git@master to target git master
 bioblend
