@@ -8,8 +8,8 @@ cd "$(dirname "$0")"
 test -z "$VIRTUAL_ENV" || deactivate || true
 if [ ! -d .venv ]; then
     # If python is from Conda, make sure virtualenv comes from conda-forge
-    if python -V 2>&1 | grep -q -e 'Anaconda' -e 'Continuum Analytics' || \
-            python -c 'import sys; print(sys.version.replace("\n", " "))' | grep -q -e 'packaged by conda-forge' ; then
+    if python3 -V 2>&1 | grep -q -e 'Anaconda' -e 'Continuum Analytics' || \
+            python3 -c 'import sys; print(sys.version.replace("\n", " "))' | grep -q -e 'packaged by conda-forge' ; then
         conda install --yes --channel conda-forge 'virtualenv>=16'
     fi
 
@@ -21,10 +21,9 @@ if [ ! -d .venv ]; then
         exit 1
     fi
 
-    virtualenv .venv
+    virtualenv -p python3 .venv
 fi
 . .venv/bin/activate
-python -c 'import sys; sys.version_info >= (2, 7, 9) or sys.exit(1)' || pip install --upgrade --force-reinstall requests[security]
 pip install --upgrade -r requirements.txt
 pip install jupyter
 jupyter notebook
