@@ -1,5 +1,5 @@
 There are 2 options to view the Jupyter notebooks contained in this repository:
-- online with Binder: just click [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nsoranzo/bioblend-tutorial/master)
+- online with Binder: just click [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nsoranzo/bioblend-tutorial/main)
 - on your Linux/macOS computer (or virtual machine):
   - clone this repository
   - `cd` in the repository directory

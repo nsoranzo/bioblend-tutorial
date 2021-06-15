@@ -1,2 +1,2 @@
-# Use git+git://github.com/galaxyproject/bioblend.git@master to target git master
+# Use git+git://github.com/galaxyproject/bioblend.git@main to target the git main branch
 bioblend
